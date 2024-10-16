@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표와관련태그</title>
+
+    <style>
+        table {
+            border: 3px dotted gray;
+            border-radius: 5%;
+            text-align: center;
+            color: darkslategrey;
+        }
+
+        table > tr > th, td {
+            padding: 8px 8px;
+            border-bottom: 1px solid gray;
+        }
+
+        caption {
+            color: darkcyan;
+            padding: 10px;
+        }
+
+        caption::before {
+            content: '[ ';
+        }
+        caption::after {
+            content: ' ]';
+        }
+
+        hr {
+            margin: 30px 0;
+        }
+    </style>
+
+
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>제목1</th>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용3</td>
+                <td>내용4</td>
+            </tr>
+            <tr>
+                <th>제목2</th>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용3</td>
+                <td>내용4</td>
+            </tr>
+            <tr>
+                <th>제목3</th>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용3</td>
+                <td>내용4</td>
+            </tr>
+        </thead>
+        <tbody>
+            <th>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용3</td>
+                <td>내용4</td>
+            </th>
+        </tbody>    
+    </table>
+
+    <hr>
+
+    <!-- COMMENT. 테이블은 기본적인 틀을 생성
+                    table : 기본적인 표를 생성
+                    tr 표의 행을 나타내는 태그
+                    th 표의 제목을 나타내는 태그
+                    td : 표에 들어갈 데이터를 나타내는 태그 -->
+
+    <table>
+        <caption><b>메뉴리스트</b></caption>
+        <tr>
+            <th>메뉴이름</th>
+            <th>메뉴가격</th>
+            <th>판매상태</th>
+        </tr>
+        <tr>
+            <td>추위사냥</td>
+            <td>2000</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>졸음사냥</td>
+            <td>20000000</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>귀찮음사냥</td>
+            <td>22000000000000</td>
+            <td>Y</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table>
+        <caption><b>회원정보리스트</b></caption>
+        <tr>
+            <th colspan="2" width="100px">합치기</th>
+            <th>합치기2</th>
+            <th rowspan="2">합치기3</th>
+        </tr>
+        <tr>
+            <th rowspan="2" height="50px">합치기</th>
+            <th>합치기2</th>
+            <th colspan="2">합치기3</th>
+        </tr>
+    </table>
+
+    <hr>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>머리1</th>
+                <th>머리2</th>
+                <th>머리3</th>
+                <th>머리4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용3</td>
+                <td>내용4</td>
+            </tr>
+            <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용3</td>
+                <td>내용4</td>
+            </tr>
+            <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용3</td>
+                <td>내용4</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

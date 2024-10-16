@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지관련태그</title>
+    <style>
+        img {
+            width: 50%;
+            margin-bottom: 20px;
+        }
+
+        .round {
+            border-radius: 50%;
+        }
+
+        .border {
+            border: 3px solid pink;
+        }
+
+        .blur {
+            filter: blur(2px);
+        }
+
+        .transform {
+            margin-top: 65px;
+            margin-bottom: 90px;
+            transform: rotate(90deg);
+        }
+
+        .hover:hover {
+            opacity: 50%;
+        }
+        
+        .link {
+            border: 3px solid violet;
+        }
+
+        .half {
+            border: 3px solid green;
+        }
+    </style>
+</head>
+<body>
+    <img src="sample/image/city1.PNG" alt="도시" class="round" />
+    <img src="sample/image/flower1.PNG" alt="꽃1" class="border" />
+    <img src="sample/image/flower2.PNG" alt="꽃2" class="blur">
+    <img src="sample/image/flower3.PNG" alt="꽃3" class="transform">
+    <img src="sample/image/flower4.PNG" alt="꽃4" class="hover">
+    <a href="http://naver.com" target="_blank"><img src="sample/image/flower5.PNG" alt="꽃5" class="link"></a>
+    <img src="sample/image/forest1.PNG" alt="숲" class="half" usemap="#map">
+    <map name="map">
+        <area shape="rect" coords="00, 00, 300, 500" href="http://naver.com" target="_blank">
+        <area shape="rect" coords="300, 0, 600, 500" href="http://google.com" target="_blank">
+    </map>
+</body>
+</html>

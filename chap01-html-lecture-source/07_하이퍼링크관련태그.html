@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하이퍼링크관련태그</title>
+    <style>
+        pre {
+            font-family: "Noto Serif", serif;
+        }
+
+        a {
+            color: teal;
+            text-decoration: none;
+            font-size: x-large;
+            letter-spacing: -1px;
+        }
+
+        ul > li ,
+        ul > li > a {
+            color: teal;
+            text-decoration: none;
+            font-size: large;
+            letter-spacing: -1px;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+
+        ol li:any-link {
+            content: '*';
+
+        }
+    </style>
+</head>
+<body>
+    <a id="title" href="#" onclick="{let}">LINK</a>
+
+    <ol>
+        <li><a href="01_글자관련태그.html" target="_blank">01_글자관련태그</a></li>
+        <li><a href="02_목록관련태그.html" target="_parent">02_목록관련태그</a></li>
+        <li><a href="03_표와관련태그.html" target="_self">03_표와관련태그</a></li>
+    </ol>
+    
+    <hr>
+
+    <ol>
+        <li onclick="window.open('https://www.naver.com', '_blank');">NAVER</li>
+        <li onclick="window.open('https://www.google.com', '_blank');">GOOGLE</li>
+    </ol>
+
+    <hr>
+
+    <a href="#"><img src="sample/image/strawberry.png" alt="딸기" /></a>
+
+    <hr>
+
+    <ul>
+        <li><a href="#index1">INDEX1</a></li>
+        <li><a href="#index2">INDEX2</a></li>
+        <li><a href="#index3">INDEX3</a></li>
+    </ul>
+
+    <hr>
+
+    <pre id="index1">
+        <h1>What is Lorem Ipsum?</h1>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </pre>
+
+    <hr>
+
+    <a href="#title">TOP</a>
+
+</body>
+</html>

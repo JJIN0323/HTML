@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼관련태그</title>
+
+    <style>
+        pre, textarea, label, button, legend, input[type="submit"] {
+            font-family: "Noto Serif", serif;
+        }
+
+        fieldset {
+            width: 200px;
+        }
+
+        hr {
+            width: 250px;
+            margin: 20px 0;
+        }
+
+        input, textarea, select {
+            display: block;
+            margin-bottom: 10px;
+            padding: 5pt 5px;
+            border: 2px solid gray;
+        }
+
+        button, input[type="submit"] {
+            border: 0;
+            margin-bottom: 20px;
+            padding: 5px 5px;
+            width: 183px;
+        }
+
+        button:hover {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <pre>FORM</pre>
+
+    <form action="search" method="post">
+        <label>FIND SEARCH ?</label>
+        <input type="text" name="search" required placeholder="SEARCH">
+        <button type="submit">- FIND -</button>
+
+        <hr>
+
+        <input type="text" placeholder="NAME">
+        <input type="text" placeholder="AGE">
+        <input type="text" placeholder="ADDRESS">
+        <textarea rows="5">HELLO</textarea>
+        <select>
+            <option value="">SELECT OPTION</option>
+            <option value="">SELECT1</option>
+            <option value="">SELECT2</option>
+        </select>
+    </form>
+
+    <hr>
+
+    <form>
+        <fieldset>
+            <legend>* TITLE *</legend>
+            <label for="number1">INPUT NUMBER 1</label>
+            <input id="number1" name="number1" type="text" value="HELLO" placeholder="TEXT">
+            <input type="submit" value="SEND">
+        </fieldset>
+    </form>
+
+    <hr>
+
+    <input type="password" name="password" placeholder="PASSWORD">
+    <input type="search" name="search" placeholder="SEARCH">
+    <input type="email" name="email" placeholder="E-MAIL">
+    <input type="submit" value="SENDING">
+</body>
+</html>
