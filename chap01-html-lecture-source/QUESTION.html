@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>연습문제</title>
+    
+        <style>
+            body > * {
+                font-family: "Noto Sans KR", sans-serif;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            fieldset {
+                text-align: left;
+            }
+    
+            hr {
+                width: 250px;
+                margin: 20px 0;
+            }
+    
+            input, textarea, select {
+                margin-bottom: 10px;
+                padding: 5pt 5px;
+                border: 2px solid gray;
+            }
+    
+            button, input[type="submit"] {
+                border: 0;
+                margin-bottom: 20px;
+                padding: 5px 5px;
+                width: 183px;
+            }
+    
+            button:hover {
+                background: black;
+                color: white;
+            }
+
+            table {
+                border: 3px dotted gray;
+                border-radius: 5%;
+                text-align: center;
+                color: darkslategrey;
+            }
+
+            table > tr > th, td {
+                padding: 8px 8px;
+                border: 1px solid gray;
+            }
+            /* 
+            table > tr > th, td:nth-child(n) {
+                border-left: 0;
+                border-bottom: 0;
+            } */
+
+            caption {
+                color: darkcyan;
+                padding: 10px;
+            }
+
+            caption::before {
+                content: '[ ';
+            }
+            caption::after {
+                content: ' ]';
+            }
+
+            .volumeSlider {
+                background: #ddd;
+                border-radius: 5px;
+                outline: none;
+            }
+        </style>
+<body>
+    <form>
+        <fieldset>
+            <legend>납품자 정보</legend>
+            <br>
+            <label>1. 납품자명 </label>
+            <input type="text">
+            <br>
+            <label>2. 이메일 </label>
+            <input type="email" placeholder="ANSWER@NAVER.COM">
+            <br>
+            <label>3. 홈페이지 </label>
+            <input type="text" value="http://">
+            <br>
+            <label>4. 지역 </label>
+            <select>
+                <option value="부산">부산</option>
+                <option value="서울">서울</option>
+            </select>
+        </fieldset>
+    </form>
+    
+    <br>
+
+    <form>
+        <fieldset>
+            <legend>납품정보</legend>
+            <ul>
+                <li>상품명 : <input type="text"></li>
+                <li>납품수량 : <input placeholder="최소 100"></li>
+                <li>납품등급 : <input type="range" class="volumeSlider"></li>
+                <li>기타사항 : <textarea></textarea></li>
+            </ul>
+        </fieldset>
+        
+    </form>
+
+    <br>
+    <label>고객명 : </label>
+    <input type="text">
+    <br>
+    <label>전화번호 : </label>
+    <input type="text">
+    <br>
+    <label>E-MAIL : </label>
+    <input type="email">
+    <br>
+    <label>피자선택 : </label>
+    <select>
+        <option>피자를 선택하세요</option>
+        <option>1</option>
+        <option>2</option>
+    </select>
+    
+    <form>
+        <fieldset>
+            <legend>피자 사이즈</legend>
+            <input type="radio">SMALL<br>
+            <input type="radio">MEDIUM<br>
+            <input type="radio">LARGE<br>
+        </fieldset>
+        <fieldset>
+            <legend>토핑 선택</legend>
+            <input type="checkbox">베이컨<br>
+            <input type="checkbox">치즈<br>
+            <input type="checkbox">양파<br>
+            <input type="checkbox">버섯<br>
+        </fieldset>
+        <label>희망배송시간 : </label>
+        <input type="time"><br>
+        <label>배송요청사항 </label>
+        <textarea></textarea><br><br>
+        <button>주문하기</button>
+    </form>
+
+    <br><br><br><br><br>
+
+    <h1>회원가입</h1>
+    <form>
+        <fieldset>
+            <legend>필수 입력 사항</legend>
+            <b>ID</b>
+            <input type="text" placeholder="아이디 10글자 이내">
+            <button>중복확인</button><br>
+            <b>비밀번호</b>
+            <input type="password" placeholder="영문, 숫자, 특수문자 포함 8자 이상"><br>
+            <b>비밀번호확인</b>
+            <input type="password"><br>
+            <b>E-MAIL</b>
+            <input type="email">
+            <select>
+                <option>직접입력</option>
+            </select><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>추가 정보</legend>
+            <label>프로필 사진</label>
+            <input type="file"><br>
+            <label>성별</label>
+            <input type="radio">남자
+            <input type="radio">여자<br>
+            <label>생년월일</label>
+            <input type="date"><br><br>
+            <label>취미</label>
+            <input type="checkbox">야구
+            <input type="checkbox">농구
+            <input type="checkbox">축구<br>
+            <input type="checkbox" checked>공부
+            <input type="checkbox">음악감상
+            <input type="checkbox">기타
+            <input type="text"><br><br>
+            <label>자기소개</label>
+            <textarea role="10"></textarea>
+        </fieldset>
+        <button>회원가입</button>
+        <button>다시입력</button>
+        <button>이전으로</button>
+    </form>
+
+    <br><br><br><br><br>
+
+    <h1>식단표 테이블 만들기</h1>
+
+    <table>
+        <caption>머행블로그 식단표</caption>
+        <thead>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+            <th>토</th>
+            <th>일</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">쌀밥</td>
+                <td colspan="3">잡곡밥</td>
+                <td>스파게티</td>
+                <td>짜장면</td>
+            </tr>
+            <tr>
+                <td>불고기</td>
+                <td>떡갈비</td>
+                <td>미니돈가스</td>
+                <td>오징어볶음</td>
+                <td>제육볶음</td>
+                <td rowspan="2">피클</td>
+                <td>단무지</td>
+            </tr>
+            <tr>
+                <td>배추김치</td>
+                <td>깍두기</td>
+                <td>미소된장국</td>
+                <td>동치미</td>
+                <td>고추절임</td>
+                <td>짬뽕국물</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <h1>표 만들기</h1>
+    <table>
+        <caption>셀 합치기</caption>
+        <tbody>
+            <tr>
+                <td colspan="3">공연요금</td>
+            </tr>
+            <tr>
+                <td>구분</td>
+                <td>S석</td>
+                <td>VIP</td>
+            </tr>
+            <tr>
+                <td>성인</td>
+                <td>30,000</td>
+                <td>50,000</td>
+            </tr>
+            <tr>
+                <td>청소년</td>
+                <td>40,000</td>
+                <td>60,000</td>
+            </tr>
+            <tr>
+                <td>소인</td>
+                <td colspan="2">미취학 아동 일반 요금의 50%</td>
+            </tr>
+            <tr>
+                <td rowspan="2">공연시간</td>
+                <td>1회</td>
+                <td>2회</td>
+            </tr>
+            <tr>
+                <td>13:000시 ~ 15:00시</td>
+                <td>17:00시 ~ 19:00시</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <table>
+        <tbody>
+            <tr>
+                <td>가</td>
+                <td>나</td>
+                <td>다</td>
+                <td rowspan="4">라</td>
+            </tr>
+            <tr>
+                <td>마</td>
+                <td rowspan="3" colspan="2">바</td>
+            </tr>
+            <tr>
+                <td>사</td>
+            </tr>
+            <tr>
+                <td>아</td>
+            </tr>
+            <tr>
+                <td colspan="2">자</td>
+                <td colspan="2">차</td>
+            </tr>
+            <tr>
+                <td colspan="4">카</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
