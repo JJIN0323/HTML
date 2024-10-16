@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>연습문제</title>
@@ -11,8 +11,6 @@
         <style>
             body > * {
                 font-family: "Noto Sans KR", sans-serif;
-                text-align: center;
-                margin: 0 auto;
             }
 
             fieldset {
@@ -52,12 +50,7 @@
             table > tr > th, td {
                 padding: 8px 8px;
                 border: 1px solid gray;
-            }
-            /* 
-            table > tr > th, td:nth-child(n) {
-                border-left: 0;
-                border-bottom: 0;
-            } */
+            }}
 
             caption {
                 color: darkcyan;
@@ -69,12 +62,6 @@
             }
             caption::after {
                 content: ' ]';
-            }
-
-            .volumeSlider {
-                background: #ddd;
-                border-radius: 5px;
-                outline: none;
             }
         </style>
 <body>
@@ -107,7 +94,7 @@
             <ul>
                 <li>상품명 : <input type="text"></li>
                 <li>납품수량 : <input placeholder="최소 100"></li>
-                <li>납품등급 : <input type="range" class="volumeSlider"></li>
+                <li>납품등급 : <input type="range"></li>
                 <li>기타사항 : <textarea></textarea></li>
             </ul>
         </fieldset>
@@ -158,18 +145,36 @@
     <form>
         <fieldset>
             <legend>필수 입력 사항</legend>
-            <b>ID</b>
-            <input type="text" placeholder="아이디 10글자 이내">
-            <button>중복확인</button><br>
-            <b>비밀번호</b>
-            <input type="password" placeholder="영문, 숫자, 특수문자 포함 8자 이상"><br>
-            <b>비밀번호확인</b>
-            <input type="password"><br>
-            <b>E-MAIL</b>
-            <input type="email">
-            <select>
-                <option>직접입력</option>
-            </select><br>
+            <table style="border: 0;">
+                <tr>
+                    <th>ID</th>
+                    <td style="border: 0;">
+                        <input type="text" placeholder="아이디 10글자 이내">
+                        <button>중복확인</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td style="border: 0;text-align: left;">
+                        <input type="password" placeholder="영문, 숫자, 특수문자 포함 8자 이상">
+                    </td>
+                </tr>
+                <tr>
+                    <th>비밀번호 확인</th>
+                    <td style="border: 0;text-align: left;">
+                        <input type="password">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td style="border: 0;text-align: left;">
+                        <input type="email">
+                        <select>
+                            <option>직접입력</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
         </fieldset>
 
         <fieldset>
@@ -181,16 +186,16 @@
             <input type="radio">여자<br>
             <label>생년월일</label>
             <input type="date"><br><br>
-            <label>취미</label>
+            <label>취미</label><br>
             <input type="checkbox">야구
             <input type="checkbox">농구
             <input type="checkbox">축구<br>
             <input type="checkbox" checked>공부
-            <input type="checkbox">음악감상
+            <input type="checkbox">음악감상<br>
             <input type="checkbox">기타
             <input type="text"><br><br>
-            <label>자기소개</label>
-            <textarea role="10"></textarea>
+            <label>자기소개</label><br>
+            <textarea rows="10" cols="60"></textarea>
         </fieldset>
         <button>회원가입</button>
         <button>다시입력</button>
@@ -201,7 +206,7 @@
 
     <h1>식단표 테이블 만들기</h1>
 
-    <table>
+    <table class="dotted">
         <caption>머행블로그 식단표</caption>
         <thead>
             <th>월</th>
@@ -241,7 +246,7 @@
 
     <br>
     <h1>표 만들기</h1>
-    <table>
+    <table class="dotted">
         <caption>셀 합치기</caption>
         <tbody>
             <tr>
