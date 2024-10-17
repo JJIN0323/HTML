@@ -9,7 +9,13 @@
     <title>폼관련태그</title>
 
     <style>
-        pre, textarea, label, button, legend, input[type="submit"] {
+
+        div {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        body * {
             font-family: "Noto Serif", serif;
         }
 
@@ -18,7 +24,7 @@
         }
 
         hr {
-            width: 250px;
+            width: 94vw;
             margin: 20px 0;
         }
 
@@ -29,26 +35,43 @@
             border: 2px solid gray;
         }
 
-        button, input[type="submit"] {
+        input[type="color" i] {
+            border: 1px solid gray !important;
+            padding: 0;
+            margin-top: 0.5rem;
+            width: 8rem;
+        }
+
+        input[type="range"] {
+            accent-color: gray;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            display: inline-block;
+        }
+
+        button, input[type="submit"], input[type="reset"] {
             border: 0;
             margin-bottom: 20px;
             padding: 5px 5px;
             width: 183px;
         }
 
-        button:hover {
+        button:hover, input[type="submit"]:hover, input[type="reset"]:hover  {
             background: black;
             color: white;
+            cursor: pointer;
         }
+
     </style>
 </head>
 <body>
     <pre>FORM</pre>
 
-    <form action="search" method="post">
+        <form action="search" method="post">
         <label>FIND SEARCH ?</label>
         <input type="text" name="search" required placeholder="SEARCH">
-        <button type="submit">- FIND -</button>
+        <button type="submit">FIND</button>
 
         <hr>
 
@@ -68,7 +91,7 @@
     <form>
         <fieldset>
             <legend>* TITLE *</legend>
-            <label for="number1">INPUT NUMBER 1</label>
+            <label for="number1">INPUT NUMBER</label>
             <input id="number1" name="number1" type="text" value="HELLO" placeholder="TEXT">
             <input type="submit" value="SEND">
         </fieldset>
@@ -79,6 +102,106 @@
     <input type="password" name="password" placeholder="PASSWORD">
     <input type="search" name="search" placeholder="SEARCH">
     <input type="email" name="email" placeholder="E-MAIL">
-    <input type="submit" value="SENDING">
+    <input type="submit" value="SEND">
+
+    <hr>
+
+    <form action="#" method="get">
+        <label>COUNT</label>
+        <input type="number" name="amount" min="0" value="0" step="3">
+        <br>
+        <label>SCORE</label>
+        <input type="range" name="score" min="0" max="100" value="10">
+        <br>
+        <input type="submit" value="SEND">
+        <input type="reset" value="CANCEL">
+    </form>
+    <hr>
+    <!-- 기본값 GET -->
+    <form action="#">
+        <label>DATE</label><br>
+        <input type="date" name="date">
+        <label>MONTH</label><br>
+        <input type="month" name="month">
+        <label>WEEK</label><br>
+        <input type="week" name="week">
+        <label>TIME</label><br>
+        <input type="time" name="time">
+        <label>DATE TIME</label><br>
+        <input type="datetime" name="datetime">
+        <!-- datetime 은 크롬에서 사용 불가능 -->
+        <label>DATE-LOCAL</label><br>
+        <input type="datetime-local" name="datetime-local">
+        <input type="submit" value="SEND">
+    </form>
+
+    <hr>
+
+    <form action="#">
+        <input type="radio" name="gender" id="m" value="남성">MALE
+        <input type="radio" name="gender" id="g" value="여성">FEMALE
+    </form>
+
+    <hr>
+
+    <form action="#">
+        <p>HOBBY</p>
+        <input type="checkbox" id="cording" name="hobby" value="CORDING">&nbsp;CORDING
+        <input type="checkbox" id="sleep" name="hobby" value="SLEEP">&nbsp;SLEEP
+        <input type="checkbox" id="watch" name="hobby" value="WATCH">&nbsp;WATCH<br><br>
+        <input type="submit" value="SEND">
+    </form>
+
+    <hr>
+
+    <form action="#">
+        <label>COLOR CHOICE</label>
+        <input type="color" name="color">
+    </form>
+
+    <hr>
+
+    <form action="#">
+        <label>FILE SELECT</label><br><br>
+        <input type="file" name="file" multiple>
+        <br>
+        <label>HIDDEN TAG</label>
+        <!-- 최초에는 화면에 보이지 않다가, 사용자 또는 관리자에게 필요에 의해 보이게 되는 태그 -->
+        <input type="hidden" name="hidden" value="1">
+        <hr>
+        <p>BUTTON TAG USING SEND VALUE</p>
+        <button type="button">BUTTON</button>
+        <button type="submit">SUBMIT</button>
+        <!-- 버튼의 타입을 지정하지 않으면, 디폴트 값은 SUBMIT 이다. -->
+        <button>NO TYPE</button>
+    </form>
+
+    <hr>
+
+    <form action="#">
+        <p>SELECT & OPTION TAG</p>
+        <select name="nation" style="width: 17rem;">
+            <option value="select one">SELECT ONE</option>
+            <option value="select two">SELECT TWO</option>
+            <option value="select three">SELECT THREE</option>
+        </select>
+        <button>SEND</button>
+        <hr>
+        <p>SELECT & OPTION TAG MULTIPLE</p>
+        <select name="nation" size="2" style="width: 17rem;" multiple>
+            <option value="select one">SELECT ONE</option>
+            <option value="select two">SELECT TWO</option>
+            <option value="select three">SELECT THREE</option>
+        </select>
+        <button>SEND</button>
+    </form>
+
+    <form action="#">
+        <p>TEXTAREA</p>
+        <textarea name="textarea" rows="5" cols="30"></textarea>
+    </form>
+
+    <hr>
+
 </body>
 </html>
